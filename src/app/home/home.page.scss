@@ -25,3 +25,11 @@
 #container a {
   text-decoration: none;
 }
+
+a {
+  text-decoration: none !important;
+}
+
+ion-card {
+  cursor: pointer;
+}

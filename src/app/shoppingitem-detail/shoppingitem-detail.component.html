@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ item.shoppingItem.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img
+      [src]="item.shoppingItem.promoSpace.posterImage.imageUrl"
+    ></ion-img>
+
+    <ion-card-content>
+      <ion-card-title>{{ item.shoppingItem.title }}</ion-card-title>
+      <p *ngFor="let price of item.shoppingItem.price | slice: 0:1">
+        {{ price.value }}kr
+      </p>
+      <p>{{ item.shoppingItem.description }}</p>
+      <p>{{ item.shoppingItem.promoSpace.title }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
